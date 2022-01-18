@@ -28,16 +28,32 @@ hashed_data = JSON.parse(customer_data)
  
 grouped_data = hashed_data.group_by { |k| k['customer_id'] }
 
+
 #looping through the grouped data
 grouped_data.each do |customer|
-    puts customer
+    # puts customer
 end 
+
+hash = Hash(grouped_data)
+puts hash
+
+# Iterating the hash to get the transaction dates for the different id's
+hash.keys.sort.each do |name|
+    puts "  id: #{name}"
+    hash[name].each do |svc|
+        puts "transaction_date: #{svc["transaction_date"]}"
+    end
+end
+
+
+
 
 #Get consecutive dates
 # Have a sliding window to keep track of the maximum consecutive days and n number (the legnth of the array)
 max_consecutive_dates = 0
 start = 0
 max_days = 0
+
 
 
 

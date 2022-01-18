@@ -4,4 +4,8 @@ Libraries used
  There's a script tag just before the body section with d3 script, ensure the version is above three to allow you to use promises.
 
 My main file is data.js, which contains my scripts. 
-To run the project either use live server or open the html file in your browser and use the console to view the results.
+To view the results run node data.js to view the output on the terminal
+
+
+##### For ruby file ####
+To view results run ruby readData.rb, to view results on the terminal when using VSCode as your Editor

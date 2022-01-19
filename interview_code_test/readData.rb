@@ -35,13 +35,16 @@ grouped_data.each do |customer|
 end 
 
 hash = Hash(grouped_data)
-puts hash
+# puts hash
 
 # Iterating the hash to get the transaction dates for the different id's
+difference_in_days = []
 hash.keys.sort.each do |name|
     puts "  id: #{name}"
     hash[name].each do |svc|
-        puts "transaction_date: #{svc["transaction_date"]}"
+        transaction_dates = svc["transaction_date"]
+        puts transaction_dates
+        # puts "transaction_date: #{svc["transaction_date"]}"
     end
 end
 
